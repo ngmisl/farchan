@@ -548,8 +548,10 @@ body {
 
 #app {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .game-container {
@@ -560,6 +562,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  position: relative;
 }
 
 .loading {

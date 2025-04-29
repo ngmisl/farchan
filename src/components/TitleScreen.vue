@@ -38,7 +38,8 @@ defineEmits(['startGame', 'connectFarcaster']);
 .title-screen {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 100%;
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -57,10 +58,15 @@ defineEmits(['startGame', 'connectFarcaster']);
   padding: 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 90%;
+  overflow: visible;
 }
 
 .game-title {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1rem, 2.5vw, 1.7rem);
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #ff6bae;
@@ -146,7 +152,7 @@ defineEmits(['startGame', 'connectFarcaster']);
   }
   
   .game-title {
-    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    font-size: clamp(0.9rem, 4vw, 1.4rem);
   }
 }
 </style>

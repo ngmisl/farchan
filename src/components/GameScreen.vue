@@ -44,7 +44,9 @@ defineEmits(['selectOption', 'resetGame', 'shareToFarcaster']);
 .game-screen {
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background-size: cover;
   background-position: center;
   overflow: hidden;

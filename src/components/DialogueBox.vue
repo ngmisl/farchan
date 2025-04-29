@@ -114,19 +114,20 @@ function handleOptionClick(index: number) {
   bottom: 0;
   left: 0;
   width: 100%;
-  min-height: 32%;
+  min-height: 25%;
   background-color: rgba(255, 255, 255, 0.92);
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 1rem;
   border-radius: 12px 12px 0 0;
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
+  margin-bottom: 0;
 }
 
 .single-dialogue-display {
-  min-height: 80px;
-  max-height: 135px;
-  margin-bottom: 1.25rem;
+  min-height: 60px;
+  max-height: 110px;
+  margin-bottom: 1rem;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
@@ -228,7 +229,8 @@ function handleOptionClick(index: number) {
 .choice-button-container {
   display: flex;
   justify-content: center;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
 }
 
 .choice-button {
