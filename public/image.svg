@@ -1,0 +1,39 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#FF8DC7"/>
+  
+  <!-- Background decoration - cherry blossoms -->
+  <circle cx="100" cy="100" r="20" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="1100" cy="100" r="15" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="200" cy="550" r="25" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="1000" cy="550" r="18" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="400" cy="70" r="12" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="800" cy="80" r="22" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="300" cy="500" r="16" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="900" cy="520" r="14" fill="#FFFFFF" opacity="0.3"/>
+  
+  <!-- Central white card -->
+  <rect x="250" y="115" width="700" height="400" rx="20" fill="white"/>
+  
+  <!-- Game title -->
+  <text x="600" y="170" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#FF4D94" text-anchor="middle">Far-chan RomCom Game</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="220" font-family="Arial, sans-serif" font-size="24" fill="#333333" text-anchor="middle">A Visual Novel Farcaster Frame</text>
+  
+  <!-- Character image outline -->
+  <rect x="530" y="240" width="140" height="220" rx="10" fill="#F5F5F5"/>
+  
+  <!-- Character placeholder -->
+  <path d="M600 270 Q630 300 600 330 Q570 300 600 270Z" fill="#FF8DC7"/>
+  <circle cx="600" cy="350" r="40" fill="#FF8DC7"/>
+  <rect x="560" y="380" width="80" height="60" rx="10" fill="#FF8DC7"/>
+  
+  <!-- Button -->
+  <rect x="450" y="480" width="300" height="50" rx="25" fill="#FF8DC7"/>
+  <text x="600" y="515" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">Play Now</text>
+  
+  <!-- Heart decorations -->
+  <path d="M350 340 Q370 320 390 340 Q410 360 390 380 Q370 400 350 380 Q330 360 350 340Z" fill="#FFB6E1" opacity="0.8"/>
+  <path d="M850 340 Q870 320 890 340 Q910 360 890 380 Q870 400 850 380 Q830 360 850 340Z" fill="#FFB6E1" opacity="0.8"/>
+</svg>

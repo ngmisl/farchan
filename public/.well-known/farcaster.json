@@ -1,17 +1,18 @@
 {
   "accountAssociation": {
-    "header": "",
-    "payload": "",
-    "signature": ""
+  "header": "eyJmaWQiOjE3OTQwLCJ0eXBlIjoiY3VzdG9keSIsImtleSI6IjB4ZTkwNDcxNWIzZjYzQjRmYkJiQ0FlMGZiODk5NmYyNTBENzlENDcwYSJ9",
+  "payload": "eyJkb21haW4iOiJmYXJjaGFuLm9yYml0ZXIud2Vic2l0ZSJ9",
+  "signature": "MHgzYTJlM2JmZmQ1MmM3NDk0MjhiYTRkNGU1ODBmYzE3MWY2ZjA5ZDg0OGNlMDBmM2JmNjM4NzIxYTE1NmRhN2ZhM2Y2NDNkYzZmOTQ1MmYxNDI0NTI2ZTQyOWFjNmZlMjkwNWMzMDBlMmZjMWI2ZWNiYzA4NjEzMGQ2NTAzMTkyMjFj"
   },
   "frame": {
     "version": "1",
     "name": "Anime RomCom Game",
-    "iconUrl": "https://romcom.orbiter.website/vite.svg",
-    "homeUrl": "https://romcom.orbiter.website",
-    "imageUrl": "https://romcom.orbiter.website/farchan-neutral-transparent.png",
+    "iconUrl": "https://farchan.orbiter.website/icon.png",
+    "homeUrl": "https://farchan.orbiter.website",
+    "imageUrl": "https://farchan.orbiter.website/image.png",
     "buttonTitle": "Play Now",
-    "splashImageUrl": "https://romcom.orbiter.website/farchan-bg.png",
-    "splashBackgroundColor": "#ffffff"
+    "splashImageUrl": "https://farchan.orbiter.website/splash.png",
+    "splashBackgroundColor": "#ffffff",
+    "webhookUrl": "https://webhooks.pingem.xyz/f/3z0ff"
   }
 }

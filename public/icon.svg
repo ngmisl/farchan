@@ -1,0 +1,10 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with solid color instead of gradient -->
+  <rect width="512" height="512" rx="128" fill="#FF8DC7" />
+  
+  <!-- Heart shape -->
+  <path d="M256 412C256 412 150 350 112 256C74 162 170 118 256 192C342 118 438 162 400 256C362 350 256 412 256 412Z" fill="white" />
+  
+  <!-- F letter overlay -->
+  <path d="M220 180H320V220H260V260H300V300H260V380H220V180Z" fill="#FF6BAE" />
+</svg>

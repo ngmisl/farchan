@@ -1,0 +1,39 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background solid color instead of gradient -->
+  <rect width="1200" height="1200" fill="#FF8DC7"/>
+  
+  <!-- Background decorative elements -->
+  <circle cx="150" cy="150" r="30" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="1050" cy="150" r="25" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="250" cy="1050" r="35" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="950" cy="1050" r="28" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="600" cy="200" r="22" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="600" cy="1000" r="32" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="300" cy="600" r="26" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="900" cy="600" r="24" fill="#FFFFFF" opacity="0.3"/>
+  
+  <!-- Central card with content -->
+  <rect x="300" y="250" width="600" height="700" rx="30" fill="white"/>
+  
+  <!-- Logo heart -->
+  <path d="M600 380 Q650 330 700 380 Q750 430 700 480 Q650 530 600 480 Q550 430 600 380Z" fill="#FF8DC7"/>
+  
+  <!-- F letter -->
+  <path d="M575 380H625V410H595V430H615V460H595V500H575V380Z" fill="white"/>
+  
+  <!-- Game title -->
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FF4D94" text-anchor="middle">Far-chan</text>
+  <text x="600" y="640" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FF4D94" text-anchor="middle">RomCom Game</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="700" font-family="Arial, sans-serif" font-size="28" fill="#333333" text-anchor="middle">A Visual Novel Adventure</text>
+  <text x="600" y="740" font-family="Arial, sans-serif" font-size="28" fill="#333333" text-anchor="middle">on Farcaster Frames</text>
+  
+  <!-- Play button -->
+  <rect x="400" y="800" width="400" height="70" rx="35" fill="#FF8DC7"/>
+  <text x="600" y="847" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Play Now</text>
+  
+  <!-- Heart decorations -->
+  <path d="M400 450 Q420 430 440 450 Q460 470 440 490 Q420 510 400 490 Q380 470 400 450Z" fill="#FFB6E1" opacity="0.8"/>
+  <path d="M800 450 Q820 430 840 450 Q860 470 840 490 Q820 510 800 490 Q780 470 800 450Z" fill="#FFB6E1" opacity="0.8"/>
+</svg>
