@@ -1,0 +1,2008 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+4. Repository files, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+<additional_info>
+
+</additional_info>
+
+</file_summary>
+
+<directory_structure>
+public/
+  .well-known/
+    farcaster.json
+  icon.svg
+  image.svg
+  splash.svg
+  vite.svg
+src/
+  assets/
+    vue.svg
+  components/
+    CharacterDisplay.vue
+    DebugPanel.vue
+    DialogueBox.vue
+    GameScreen.vue
+    HelloWorld.vue
+    TitleScreen.vue
+  App.vue
+  main.ts
+  style.css
+  vite-env.d.ts
+.gitignore
+.windsurfrules
+index.html
+LICENSE
+package.json
+README.md
+renovate.json
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="public/icon.svg">
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with solid color instead of gradient -->
+  <rect width="512" height="512" rx="128" fill="#FF8DC7" />
+  
+  <!-- Heart shape -->
+  <path d="M256 412C256 412 150 350 112 256C74 162 170 118 256 192C342 118 438 162 400 256C362 350 256 412 256 412Z" fill="white" />
+  
+  <!-- F letter overlay -->
+  <path d="M220 180H320V220H260V260H300V300H260V380H220V180Z" fill="#FF6BAE" />
+</svg>
+</file>
+
+<file path="public/image.svg">
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#FF8DC7"/>
+  
+  <!-- Background decoration - cherry blossoms -->
+  <circle cx="100" cy="100" r="20" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="1100" cy="100" r="15" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="200" cy="550" r="25" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="1000" cy="550" r="18" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="400" cy="70" r="12" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="800" cy="80" r="22" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="300" cy="500" r="16" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="900" cy="520" r="14" fill="#FFFFFF" opacity="0.3"/>
+  
+  <!-- Central white card -->
+  <rect x="250" y="115" width="700" height="400" rx="20" fill="white"/>
+  
+  <!-- Game title -->
+  <text x="600" y="170" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#FF4D94" text-anchor="middle">Far-chan RomCom Game</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="220" font-family="Arial, sans-serif" font-size="24" fill="#333333" text-anchor="middle">A Visual Novel Farcaster Frame</text>
+  
+  <!-- Character image outline -->
+  <rect x="530" y="240" width="140" height="220" rx="10" fill="#F5F5F5"/>
+  
+  <!-- Character placeholder -->
+  <path d="M600 270 Q630 300 600 330 Q570 300 600 270Z" fill="#FF8DC7"/>
+  <circle cx="600" cy="350" r="40" fill="#FF8DC7"/>
+  <rect x="560" y="380" width="80" height="60" rx="10" fill="#FF8DC7"/>
+  
+  <!-- Button -->
+  <rect x="450" y="480" width="300" height="50" rx="25" fill="#FF8DC7"/>
+  <text x="600" y="515" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">Play Now</text>
+  
+  <!-- Heart decorations -->
+  <path d="M350 340 Q370 320 390 340 Q410 360 390 380 Q370 400 350 380 Q330 360 350 340Z" fill="#FFB6E1" opacity="0.8"/>
+  <path d="M850 340 Q870 320 890 340 Q910 360 890 380 Q870 400 850 380 Q830 360 850 340Z" fill="#FFB6E1" opacity="0.8"/>
+</svg>
+</file>
+
+<file path="public/splash.svg">
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background solid color instead of gradient -->
+  <rect width="1200" height="1200" fill="#FF8DC7"/>
+  
+  <!-- Background decorative elements -->
+  <circle cx="150" cy="150" r="30" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="1050" cy="150" r="25" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="250" cy="1050" r="35" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="950" cy="1050" r="28" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="600" cy="200" r="22" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="600" cy="1000" r="32" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="300" cy="600" r="26" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="900" cy="600" r="24" fill="#FFFFFF" opacity="0.3"/>
+  
+  <!-- Central card with content -->
+  <rect x="300" y="250" width="600" height="700" rx="30" fill="white"/>
+  
+  <!-- Logo heart -->
+  <path d="M600 380 Q650 330 700 380 Q750 430 700 480 Q650 530 600 480 Q550 430 600 380Z" fill="#FF8DC7"/>
+  
+  <!-- F letter -->
+  <path d="M575 380H625V410H595V430H615V460H595V500H575V380Z" fill="white"/>
+  
+  <!-- Game title -->
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FF4D94" text-anchor="middle">Far-chan</text>
+  <text x="600" y="640" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FF4D94" text-anchor="middle">RomCom Game</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="700" font-family="Arial, sans-serif" font-size="28" fill="#333333" text-anchor="middle">A Visual Novel Adventure</text>
+  <text x="600" y="740" font-family="Arial, sans-serif" font-size="28" fill="#333333" text-anchor="middle">on Farcaster Frames</text>
+  
+  <!-- Play button -->
+  <rect x="400" y="800" width="400" height="70" rx="35" fill="#FF8DC7"/>
+  <text x="600" y="847" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Play Now</text>
+  
+  <!-- Heart decorations -->
+  <path d="M400 450 Q420 430 440 450 Q460 470 440 490 Q420 510 400 490 Q380 470 400 450Z" fill="#FFB6E1" opacity="0.8"/>
+  <path d="M800 450 Q820 430 840 450 Q860 470 840 490 Q820 510 800 490 Q780 470 800 450Z" fill="#FFB6E1" opacity="0.8"/>
+</svg>
+</file>
+
+<file path="src/assets/vue.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="37.07" height="36" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 198"><path fill="#41B883" d="M204.8 0H256L128 220.8L0 0h97.92L128 51.2L157.44 0h47.36Z"></path><path fill="#41B883" d="m0 0l128 220.8L256 0h-51.2L128 132.48L50.56 0H0Z"></path><path fill="#35495E" d="M50.56 0L128 133.12L204.8 0h-47.36L128 51.2L97.92 0H50.56Z"></path></svg>
+</file>
+
+<file path="src/components/CharacterDisplay.vue">
+<script setup lang="ts">
+defineProps<{
+  mood: string;
+}>();
+</script>
+
+<template>
+  <div class="character">
+    <img 
+      :src="`/farchan-${mood}-transparent.png`" 
+      :alt="`Far-chan (${mood})`" 
+      :class="`mood-${mood}`"
+    />
+  </div>
+</template>
+
+<style scoped>
+.character {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+}
+
+.character img {
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.mood-angry {
+  transform: scale(1.05);
+}
+
+.mood-shy {
+  transform: scale(0.95) translateY(5px);
+}
+
+.mood-inlove {
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.03); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.03); }
+  60% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .character {
+    bottom: 32%;
+    width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .character {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .character {
+    width: 40%;
+  }
+}
+</style>
+</file>
+
+<file path="src/components/DebugPanel.vue">
+<script setup lang="ts">
+import { ref } from 'vue';
+
+defineProps<{
+  context: Record<string, unknown> | undefined;
+}>();
+
+const isOpen = ref(false);
+
+const togglePanel = () => {
+  isOpen.value = !isOpen.value;
+};
+</script>
+
+<template>
+  <div class="debug-panel">
+    <h3>Frame Context</h3>
+    <button @click="togglePanel" class="debug-button">
+      <span>{{ isOpen ? '▼' : '►' }}</span>
+      {{ isOpen ? 'Hide' : 'Show' }} Frame Context
+    </button>
+    
+    <div v-if="isOpen" class="context-content">
+      <pre>{{ JSON.stringify(context, null, 2) }}</pre>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.debug-panel {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.debug-button {
+  padding: 0.6rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.context-content {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+}
+</style>
+</file>
+
+<file path="src/components/HelloWorld.vue">
+<template>
+  <!-- Empty placeholder component -->
+</template>
+
+<script setup lang="ts">
+// This file exists only to satisfy TypeScript configuration requirements
+</script>
+
+<style scoped>
+</style>
+</file>
+
+<file path="src/main.ts">
+import { createApp } from 'vue'
+import './style.css'
+import App from './App.vue'
+
+createApp(App).mount('#app')
+</file>
+
+<file path="src/style.css">
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+</file>
+
+<file path="src/vite-env.d.ts">
+/// <reference types="vite/client" />
+</file>
+
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path=".windsurfrules">
+1. use bun
+2. use vite
+3. use vue
+4. use zod
+5. make it mobile optimized
+6. use frames-sdk for farcaster frames
+7. keep it static
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Even Though I'm Just a Regular High Schooler...</title>
+    <meta name="fc:frame" content='{"version":"next","imageUrl":"https://romcom.orbiter.website/farchan-neutral-transparent.png","button":{"title":"Play Now","action":{"type":"launch_frame","name":"Launch","url":"https://romcom.orbiter.website","splashImageUrl":"https://romcom.orbiter.website/farchan-bg.png","splashBackgroundColor":"#ffffff"}}}' />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+</file>
+
+<file path="LICENSE">
+MIT License
+
+Copyright (c) 2025 ngmisl
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</file>
+
+<file path="package.json">
+{
+  "name": "farchan",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@farcaster/frame-sdk": "^0.0.36",
+    "vue": "^3.5.13",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.2",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.3.1",
+    "vue-tsc": "^2.2.8"
+  }
+}
+</file>
+
+<file path="renovate.json">
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ]
+}
+</file>
+
+<file path="tsconfig.app.json">
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
+</file>
+
+<file path="tsconfig.json">
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
+</file>
+
+<file path="tsconfig.node.json">
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["vite.config.ts"]
+}
+</file>
+
+<file path="vite.config.ts">
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+})
+</file>
+
+<file path="public/.well-known/farcaster.json">
+{
+  "accountAssociation": {
+  "header": "eyJmaWQiOjE3OTQwLCJ0eXBlIjoiY3VzdG9keSIsImtleSI6IjB4ZTkwNDcxNWIzZjYzQjRmYkJiQ0FlMGZiODk5NmYyNTBENzlENDcwYSJ9",
+  "payload": "eyJkb21haW4iOiJmYXJjaGFuLm9yYml0ZXIud2Vic2l0ZSJ9",
+  "signature": "MHgzYTJlM2JmZmQ1MmM3NDk0MjhiYTRkNGU1ODBmYzE3MWY2ZjA5ZDg0OGNlMDBmM2JmNjM4NzIxYTE1NmRhN2ZhM2Y2NDNkYzZmOTQ1MmYxNDI0NTI2ZTQyOWFjNmZlMjkwNWMzMDBlMmZjMWI2ZWNiYzA4NjEzMGQ2NTAzMTkyMjFj"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Anime RomCom Game",
+    "iconUrl": "https://farchan.orbiter.website/icon.png",
+    "homeUrl": "https://farchan.orbiter.website",
+    "imageUrl": "https://farchan.orbiter.website/image.png",
+    "buttonTitle": "Play Now",
+    "splashImageUrl": "https://farchan.orbiter.website/splash.png",
+    "splashBackgroundColor": "#ffffff",
+    "webhookUrl": "https://webhooks.pingem.xyz/f/3z0ff"
+  }
+}
+</file>
+
+<file path="public/vite.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8DC7"></stop>
+      <stop offset="100%" stop-color="#FF3385"></stop>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <path filter="url(#shadow)" fill="rgba(0,0,0,0.3)" d="M128 216C128 216 40 168 40 92C40 72 56 56 76 56C96 56 116 72 128 92C140 72 160 56 180 56C200 56 216 72 216 92C216 168 128 216 128 216Z"></path>
+  
+  <!-- Heart -->
+  <path fill="url(#heartGradient)" d="M128 216C128 216 40 168 40 92C40 72 56 56 76 56C96 56 116 72 128 92C140 72 160 56 180 56C200 56 216 72 216 92C216 168 128 216 128 216Z"></path>
+  
+  <!-- Letter F -->
+  <text x="95" y="150" font-family="Arial, sans-serif" font-weight="bold" font-size="80" fill="white">F</text>
+</svg>
+</file>
+
+<file path="src/components/DialogueBox.vue">
+<script setup lang="ts">
+import { ref } from 'vue';
+
+// Define interface for option objects
+export interface DialogOption {
+  text: string;
+  outcome?: string;
+}
+
+defineProps({
+  currentDialogue: {
+    type: Object,
+    default: () => ({ speaker: '', text: '' })
+  },
+  options: {
+    type: Array as () => DialogOption[],
+    default: () => []
+  },
+  isFinalScene: {
+    type: Boolean,
+    default: false
+  },
+  finalEnding: {
+    type: String,
+    default: ''
+  },
+  farcasterConnected: {
+    type: Boolean,
+    default: false
+  },
+  turnCount: {
+    type: Number,
+    default: 0
+  },
+  gameOutcome: {
+    type: String,
+    default: ''
+  }
+});
+
+const emit = defineEmits(['selectOption', 'resetGame', 'shareToFarcaster']);
+
+// For handling choice popup
+const showChoicePopup = ref(false);
+
+function toggleChoicePopup() {
+  showChoicePopup.value = !showChoicePopup.value;
+}
+
+function handleOptionClick(index: number) {
+  emit('selectOption', index);
+  showChoicePopup.value = false;
+}
+</script>
+
+<template>
+  <div class="dialogue-box">
+    <!-- Single Dialogue Entry (only shown when not in final scene) -->
+    <div class="single-dialogue-display" v-if="!isFinalScene">
+      <div v-if="currentDialogue" 
+           class="dialogue-entry"
+           :class="{ 
+             'narrator': currentDialogue.speaker === 'Narrator', 
+             'player': currentDialogue.speaker !== 'Narrator' && currentDialogue.speaker !== 'Far-chan', 
+             'Far-chan': currentDialogue.speaker === 'Far-chan' 
+           }">
+        <strong>{{ currentDialogue.speaker }}:</strong> {{ currentDialogue.text }}
+      </div>
+    </div>
+    
+    <!-- Final Scene -->
+    <div v-if="isFinalScene" class="ending">
+      <p class="ending-text">{{ finalEnding }}</p>
+      <div class="ending-buttons">
+        <button @click="$emit('resetGame')" class="reset-button">Play Again</button>
+        
+        <!-- Share to Farcaster button (only appears for good ending and when connected) -->
+        <button 
+          v-if="gameOutcome === 'good_end' && farcasterConnected" 
+          @click="$emit('shareToFarcaster')" 
+          class="share-button"
+        >
+          Share to Farcaster
+        </button>
+      </div>
+    </div>
+    
+    <!-- Choice Button for Non-Final Scenes -->
+    <div v-else class="choice-button-container">
+      <button v-if="options && options.length > 0" @click="toggleChoicePopup" class="choice-button">
+        Choose Your Response
+      </button>
+    </div>
+    
+    <!-- Choice Popup -->
+    <div v-if="showChoicePopup" class="choice-popup-overlay" @click="toggleChoicePopup">
+      <div class="choice-popup" @click.stop>
+        <div class="choice-popup-header">
+          <h2>Choose Your Response</h2>
+          <button @click="toggleChoicePopup" class="close-button">×</button>
+        </div>
+        <div class="choice-options">
+          <button 
+            v-for="(option, index) in options" 
+            :key="index"
+            @click="handleOptionClick(index)"
+            class="option-button"
+          >
+            {{ option.text }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.dialogue-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 25%;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 1.25rem 1.25rem 1rem;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.single-dialogue-display {
+  min-height: 60px;
+  max-height: 110px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dialogue-entry {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+  padding: 0.35rem 0;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+.dialogue-entry.narrator {
+  font-style: italic;
+  color: #555;
+  background-color: rgba(240, 240, 240, 0.7);
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.dialogue-entry.Far-chan {
+  color: #cc3366;
+  font-weight: 500;
+}
+
+.dialogue-entry.player {
+  color: #3355aa;
+  font-weight: 500;
+}
+
+.dialogue-entry strong {
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+
+.ending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.5rem;
+}
+
+.ending-text {
+  font-style: italic;
+  text-align: center;
+  color: #ff4d94;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.reset-button {
+  padding: 0.85rem 1.75rem;
+  background-color: #ff8dc7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  font-size: 1.05rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button:hover {
+  background-color: #ff6bae;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.share-button {
+  padding: 0.85rem 1.75rem;
+  background-color: #ff8dc7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  font-size: 1.05rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.share-button:hover {
+  background-color: #ff6bae;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.ending-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.choice-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.choice-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #ff8dc7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  font-size: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.choice-button:hover {
+  background-color: #ff6bae;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.choice-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.choice-popup {
+  width: 90%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.choice-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.choice-popup-header h2 {
+  font-size: 1.3rem;
+  color: #ff6bae;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.choice-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.option-button {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  color: #333;
+}
+
+.option-button:hover {
+  background-color: #ffe6f2;
+  border-color: #ffb6e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .dialogue-box {
+    padding: 1rem;
+    min-height: 35%;
+  }
+  
+  .single-dialogue-display {
+    max-height: 120px;
+    font-size: 0.95rem;
+  }
+  
+  .choice-popup {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .option-button {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .single-dialogue-display {
+    max-height: 150px;
+    font-size: 1.1rem;
+  }
+  
+  .dialogue-box {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .single-dialogue-display {
+    max-height: 180px;
+  }
+}
+</style>
+</file>
+
+<file path="src/components/GameScreen.vue">
+<script setup lang="ts">
+import CharacterDisplay from './CharacterDisplay.vue';
+import DialogueBox from './DialogueBox.vue';
+import type { DialogOption } from './DialogueBox.vue';
+
+defineProps({
+  // Character state
+  farChanMood: String,
+  
+  // Dialogue display
+  currentDialogue: Object,
+  dialogOptions: {
+    type: Array as () => DialogOption[],
+    default: () => []
+  },
+  isFinalScene: Boolean,
+  finalEnding: String,
+  
+  // Farcaster and game state
+  farcasterConnected: Boolean,
+  turnCount: Number,
+  gameOutcome: {
+    type: String,
+    default: ''
+  }
+});
+
+defineEmits(['selectOption', 'resetGame', 'shareToFarcaster']);
+</script>
+
+<template>
+  <div class="game-screen" :style="{ backgroundImage: 'url(/farchan-bg.png)' }">
+    <CharacterDisplay :mood="farChanMood || 'neutral'" />
+    
+    <DialogueBox 
+      :currentDialogue="currentDialogue"
+      :options="dialogOptions"
+      :isFinalScene="isFinalScene"
+      :finalEnding="finalEnding"
+      :farcasterConnected="farcasterConnected"
+      :turnCount="turnCount"
+      :gameOutcome="gameOutcome || ''"
+      @selectOption="$emit('selectOption', $event)"
+      @resetGame="$emit('resetGame')"
+      @shareToFarcaster="$emit('shareToFarcaster')"
+    />
+  </div>
+</template>
+
+<style scoped>
+.game-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .game-screen {
+    height: 80vh;
+    border-radius: 0;
+  }
+}
+</style>
+</file>
+
+<file path="src/components/TitleScreen.vue">
+<script setup lang="ts">
+defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  farcasterConnected: {
+    type: Boolean,
+    default: false
+  },
+  playerName: {
+    type: String,
+    default: 'You'
+  }
+});
+
+defineEmits(['startGame', 'connectFarcaster']);
+</script>
+
+<template>
+  <div class="title-screen" :style="{ backgroundImage: 'url(/farchan-bg.png)' }">
+    <div class="title-content">
+      <h1 class="game-title">{{ title }}</h1>
+      
+      <div class="title-character">
+        <img src="/farchan-neutral-transparent.png" alt="Far-chan" />
+      </div>
+      
+      <div class="title-buttons">
+        <button @click="$emit('startGame')" class="start-button">Start Game</button>
+        <button 
+          v-if="!farcasterConnected" 
+          @click="$emit('connectFarcaster')" 
+          class="farcaster-button"
+        >
+          Connect Farcaster
+        </button>
+        <div v-else class="farcaster-connected">
+          Connected as: {{ playerName }}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.title-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-content {
+  width: 90%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 90%;
+  overflow: visible;
+}
+
+.game-title {
+  font-size: clamp(1rem, 2.5vw, 1.7rem);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #ff6bae;
+  line-height: 1.4;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.title-character {
+  width: 60%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.title-character img {
+  width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.title-buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.start-button {
+  padding: 1rem;
+  background-color: #ff8dc7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:hover {
+  background-color: #ff6bae;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.farcaster-button {
+  padding: 1rem;
+  background-color: #6E91F6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.farcaster-button:hover {
+  background-color: #5D7FDE;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.farcaster-connected {
+  font-size: 1.1rem;
+  color: #666;
+  background-color: #f0f0f0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .title-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  
+  .game-title {
+    font-size: clamp(0.9rem, 4vw, 1.4rem);
+  }
+}
+</style>
+</file>
+
+<file path="src/App.vue">
+<script setup lang="ts">
+import { ref, onMounted, computed } from 'vue'
+import sdk from '@farcaster/frame-sdk'
+import { z } from 'zod'
+
+// Components
+import TitleScreen from './components/TitleScreen.vue'
+import GameScreen from './components/GameScreen.vue'
+
+// Define type for the Farcaster SDK context
+type FrameContext = Record<string, unknown>
+
+// Game state and types
+interface GameState {
+  phase: number
+  farChanMood: string
+  dialogHistory: Array<{ speaker: string; text: string; mood?: string }>
+  selectedOption: number | null
+  showTitleScreen: boolean
+  playerName: string
+  farcasterConnected: boolean
+  lastOutcome: string | null
+  turnCount: number
+}
+
+// Validation schema for saving game state
+const gameStateSchema = z.object({
+  phase: z.number().int().min(0),
+  farChanMood: z.string(),
+  dialogHistory: z.array(z.object({
+    speaker: z.string(),
+    text: z.string(),
+    mood: z.string().optional()
+  })),
+  selectedOption: z.number().nullable(),
+  showTitleScreen: z.boolean(),
+  playerName: z.string(),
+  farcasterConnected: z.boolean(),
+  lastOutcome: z.string().nullable(),
+  turnCount: z.number().int().min(0)
+})
+
+// SDK state
+const isSDKLoaded = ref(false)
+const context = ref<FrameContext | undefined>()
+
+// Game state
+const gameState = ref<GameState>({
+  showTitleScreen: true,
+  phase: 0,
+  farChanMood: 'neutral',
+  dialogHistory: [],
+  selectedOption: null as number | null,
+  playerName: 'You',
+  farcasterConnected: false,
+  lastOutcome: null as string | null,
+  turnCount: 0
+})
+
+// Game scenes and dialogue content - simplified to a single scene
+const scenes = [
+  // Main Scene
+  {
+    id: 0,
+    location: 'classroom',
+    intro: "I can't believe I accidentally confessed to Far-chan yesterday! Now I have to face her at school...",
+    text: "You spot Far-chan reading alone by the window. The morning sunlight catches in her hair as she looks up, noticing you. Her expression is unreadable as she closes her book.",
+    speaker: "Narrator",
+    options: [
+      { 
+        text: "Hey, about yesterday... I meant what I said. You're really special to me.", 
+        outcome: "sincere"
+      },
+      { 
+        text: "Good morning! Nice weather we're having, right? Haha...", 
+        outcome: "awkward"
+      },
+      { 
+        text: "I was wondering if you thought about what I said yesterday?", 
+        outcome: "direct"
+      }
+    ],
+    responses: {
+      sincere: {
+        text: "Hmph. You can't just say things like that so easily! But... I guess I don't hate hearing it.",
+        mood: "shy",
+        nextOptions: [
+          {
+            text: "Would you like to have lunch together today? Just the two of us?",
+            outcome: "lunch_invite"
+          },
+          {
+            text: "I've liked you for a long time. I was just too nervous to say anything until now.",
+            outcome: "confession_deeper"
+          },
+          {
+            text: "I understand if you need time to think about it. I'll wait.",
+            outcome: "patient"
+          }
+        ]
+      },
+      awkward: {
+        text: "Are you seriously talking about the weather right now? After what you said yesterday?",
+        mood: "angry",
+        nextOptions: [
+          {
+            text: "Sorry, I'm just nervous. I really do like you, Far-chan.",
+            outcome: "recover"
+          },
+          {
+            text: "Yeah, I guess that was pretty lame. But talking about feelings is hard!",
+            outcome: "honest_awkward"
+          },
+          {
+            text: "Maybe we should just forget about yesterday...",
+            outcome: "retreat"
+          }
+        ]
+      },
+      direct: {
+        text: "You can't just ask me that out of nowhere! I... I haven't decided how I feel yet.",
+        mood: "shy",
+        nextOptions: [
+          {
+            text: "That's okay. I just want you to know my feelings are genuine.",
+            outcome: "reassure"
+          },
+          {
+            text: "Maybe we could hang out sometime? No pressure.",
+            outcome: "casual"
+          },
+          {
+            text: "I understand. Take all the time you need.",
+            outcome: "space"
+          }
+        ]
+      },
+      lunch_invite: {
+        text: "I... I suppose I could do that. But don't get any weird ideas! I just happen to have made extra food today.",
+        mood: "shy",
+        nextOptions: [
+          {
+            text: "Your cooking looks amazing! Did you make this yourself?",
+            outcome: "good_end"
+          }
+        ]
+      },
+      confession_deeper: {
+        text: "You've liked me for that long? Why didn't you say something sooner, you dummy...",
+        mood: "shy",
+        nextOptions: [
+          {
+            text: "The sunsets are always beautiful here, but they're better when I'm with you.",
+            outcome: "good_end"
+          }
+        ]
+      },
+      patient: {
+        text: "You'd... wait for me? Nobody's ever been that patient with me before...",
+        mood: "shy",
+        nextOptions: [
+          {
+            text: "You're worth waiting for. I just want you to be comfortable.",
+            outcome: "good_end"
+          }
+        ]
+      },
+      recover: {
+        text: "Well... at least you're being honest now.",
+        mood: "neutral",
+        nextOptions: [
+          {
+            text: "I promise to always be honest with you about my feelings.",
+            outcome: "good_end"
+          }
+        ]
+      },
+      honest_awkward: {
+        text: "At least you're being honest now. Maybe you're not completely hopeless.",
+        mood: "neutral",
+        nextOptions: [
+          {
+            text: "Does that mean I have a chance?",
+            outcome: "good_end"
+          }
+        ]
+      },
+      retreat: {
+        text: "Fine. If that's what you want, then forget it ever happened.",
+        mood: "angry",
+        nextOptions: [
+          {
+            text: "Wait, Far-chan! That's not what I meant. I do care about you!",
+            outcome: "bad_end"
+          }
+        ]
+      },
+      reassure: {
+        text: "Genuine, huh? It's not like I care that much... but I'm listening.",
+        mood: "shy",
+        nextOptions: [
+          {
+            text: "I want to know everything about you. What makes you happy? What are your dreams?",
+            outcome: "good_end"
+          }
+        ]
+      },
+      casual: {
+        text: "Hmm... I guess hanging out would be fine. Just don't make it weird, okay?",
+        mood: "neutral",
+        nextOptions: [
+          {
+            text: "I'd really like that. I know a great cafe we could try.",
+            outcome: "good_end"
+          }
+        ]
+      },
+      space: {
+        text: "...thank you for understanding. Not many people do.",
+        mood: "shy",
+        nextOptions: [
+          {
+            text: "Of course. Your feelings matter to me.",
+            outcome: "good_end"
+          }
+        ]
+      },
+      good_end: {
+        text: "You know, I never thought someone would understand me the way you do. It's... nice.",
+        mood: "inlove",
+        ending: "Far-chan smiles at you, a genuine smile that lights up her entire face. As cherry blossoms drift down around you both, you realize that sometimes the most beautiful love stories begin with an accidental confession."
+      },
+      bad_end: {
+        text: "It's too late for that. I think we should just be classmates. Nothing more.",
+        mood: "neutral",
+        ending: "You nod, accepting her decision with as much dignity as you can muster. The cherry blossoms continue to fall, indifferent to the quiet heartbreak beneath them."
+      }
+    }
+  }
+]
+
+// Type assertion helper for responses
+function assertStringIndex<T>(obj: Record<string, T>, key: string): T | undefined {
+  return obj[key as keyof typeof obj];
+}
+
+// Game mechanics and helper functions
+const currentScene = computed(() => {
+  return scenes[0]; // Always the same scene for this simple game
+})
+
+const currentOptions = computed(() => {
+  const scene = currentScene.value;
+  if (gameState.value.lastOutcome === null) {
+    return scene.options || []; // Ensure options is never undefined
+  }
+  
+  // If we have a response, get the next options based on the last outcome
+  const response = gameState.value.lastOutcome ? 
+    assertStringIndex(scene.responses, gameState.value.lastOutcome) : undefined;
+  
+  // Use type guard to safely check if nextOptions exists
+  if (response && 'nextOptions' in response) {
+    return response.nextOptions;
+  }
+  return [];
+})
+
+const isFinalScene = computed(() => {
+  if (gameState.value.lastOutcome === null) return false;
+  
+  const isEndingOutcome = gameState.value.lastOutcome === 'good_end' || 
+                          gameState.value.lastOutcome === 'bad_end';
+  
+  return isEndingOutcome;
+})
+
+const getFinalEnding = computed(() => {
+  if (!isFinalScene.value) return '';
+  
+  const scene = currentScene.value;
+  const lastOutcome = gameState.value.lastOutcome;
+  
+  if (!lastOutcome || !(lastOutcome in scene.responses)) {
+    return '';
+  }
+  
+  const response = assertStringIndex(scene.responses, lastOutcome);
+  
+  // Check if the response has an ending property
+  return (response && 'ending' in response) ? response.ending : '';
+})
+
+// Reactive refs for tracking the game state
+const currentDialogue = computed(() => {
+  if (gameState.value.dialogHistory.length === 0) {
+    return { speaker: '', text: '' };
+  }
+  return gameState.value.dialogHistory[gameState.value.dialogHistory.length - 1];
+})
+
+// Handle starting the game
+const startGame = () => {
+  gameState.value.showTitleScreen = false;
+  resetGame();
+}
+
+// Connect to Farcaster
+const connectFarcaster = async () => {
+  try {
+    // If SDK isn't loaded yet, wait for it
+    if (!isSDKLoaded.value) {
+      console.log('Waiting for SDK to load...');
+      return;
+    }
+    
+    // If we have a valid context with user information
+    if (context.value && 'user' in context.value) {
+      const user = context.value.user as Record<string, unknown>;
+      if (typeof user.username === 'string') {
+        gameState.value.playerName = user.username;
+        gameState.value.farcasterConnected = true;
+        console.log(`Connected as: ${gameState.value.playerName}`);
+      }
+    } else {
+      console.log('No Farcaster user found in context');
+    }
+  } catch (error) {
+    console.error('Failed to connect to Farcaster:', error);
+  }
+}
+
+// Handle selecting a dialogue option
+const handleOptionSelect = (index: number) => {
+  if (isFinalScene.value) return;
+  
+  gameState.value.selectedOption = index;
+  const option = currentOptions.value[index];
+  if (!option) return;
+  
+  console.log("Selected option:", option); // Debug
+  
+  // Increment turn counter
+  gameState.value.turnCount++;
+  
+  // Add player's choice to dialogue history
+  gameState.value.dialogHistory.push({ 
+    speaker: gameState.value.playerName, 
+    text: option.text 
+  });
+  
+  // Store the outcome for next options and ending determination
+  gameState.value.lastOutcome = option.outcome;
+  
+  // Get current scene response
+  const scene = currentScene.value;
+  if (scene.responses && option.outcome in scene.responses) {
+    const responseObj = assertStringIndex(scene.responses, option.outcome);
+    
+    if (responseObj) {
+      // Update Far-chan's mood based on the response
+      if (responseObj.mood) {
+        gameState.value.farChanMood = responseObj.mood;
+      }
+      
+      // Add Far-chan's response to dialogue history
+      setTimeout(() => {
+        gameState.value.dialogHistory.push({ 
+          speaker: 'Far-chan', 
+          text: responseObj.text,
+          mood: responseObj.mood 
+        });
+        
+        // If this is an ending, add the ending text after a delay
+        if ('ending' in responseObj) {
+          setTimeout(() => {
+            // Use player's name in the ending text
+            let endingText = responseObj.ending;
+            if (gameState.value.playerName !== 'You') {
+              endingText = endingText.replace(/You/g, gameState.value.playerName);
+            }
+            
+            gameState.value.dialogHistory.push({ 
+              speaker: 'Narrator', 
+              text: endingText
+            });
+          }, 1500);
+        }
+      }, 1000);
+    }
+  }
+  
+  console.log("Updated dialogue history:", gameState.value.dialogHistory); // Debug
+  
+  // Save game state
+  saveGameState();
+}
+
+// Save game state
+const saveGameState = () => {
+  try {
+    const validated = gameStateSchema.parse(gameState.value);
+    localStorage.setItem('romcom-game-state', JSON.stringify(validated));
+    console.log("Game state saved"); // Debug
+  } catch (error) {
+    console.error('Failed to save game state:', error);
+  }
+}
+
+// Reset game state
+const resetGame = () => {
+  gameState.value = {
+    ...gameState.value,
+    phase: 0,
+    farChanMood: 'neutral',
+    dialogHistory: [],
+    selectedOption: null,
+    showTitleScreen: false,
+    lastOutcome: null,
+    turnCount: 0
+  };
+  
+  // Add the initial scene text
+  const scene = scenes[0];
+  
+  // First add intro
+  if (scene.intro) {
+    let introText = scene.intro;
+    if (gameState.value.playerName !== 'You') {
+      introText = introText.replace(/I/g, gameState.value.playerName);
+    }
+    
+    gameState.value.dialogHistory.push({ 
+      speaker: 'Narrator', 
+      text: introText
+    });
+  }
+  
+  // Then add the scene text
+  let sceneText = scene.text;
+  if (gameState.value.playerName !== 'You') {
+    sceneText = sceneText.replace(/You/g, gameState.value.playerName);
+  }
+  
+  gameState.value.dialogHistory.push({ 
+    speaker: scene.speaker ?? 'Narrator', 
+    text: sceneText
+  });
+  
+  // Save the reset state
+  saveGameState();
+}
+
+// Add function to share to Farcaster
+function shareToFarcaster() {
+  if (!gameState.value.farcasterConnected) {
+    console.error('Cannot share: Farcaster not connected');
+    return;
+  }
+  
+  // Create the share text with turn count
+  const outcome = gameState.value.lastOutcome || '';
+  const turnCount = gameState.value.turnCount;
+  
+  // Craft an engaging message based on which ending was reached
+  let shareMessage = '';
+  
+  if (outcome.includes('good_end')) {
+    shareMessage = `I got the good ending with Far-chan in ${turnCount} turns! Can you do better?`;
+  } else if (outcome.includes('bad_end')) {
+    shareMessage = `I got the bad ending with Far-chan in ${turnCount} turns. Can you get the good ending?`;
+  } else {
+    shareMessage = `I've been chatting with Far-chan for ${turnCount} turns. Come join the fun!`;
+  }
+  
+  try {
+    // Use the Farcaster SDK to create a cast
+    sdk.actions.composeCast({
+      text: shareMessage,
+      embeds: ["https://farchan.orbiter.website"]
+    }).then(result => {
+      console.log('Shared to Farcaster successfully', result);
+    }).catch(error => {
+      console.error('Error posting to Farcaster:', error);
+    });
+  } catch (error) {
+    console.error('Failed to share to Farcaster:', error);
+  }
+}
+
+// Farcaster SDK initialization
+onMounted(async () => {
+  try {
+    context.value = await sdk.context;
+    isSDKLoaded.value = true;
+    // Signal to Farcaster that the frame is ready
+    if (sdk.actions && typeof sdk.actions.ready === 'function') {
+      sdk.actions.ready();
+    }
+    
+    // Check if there's a Farcaster user already in the context
+    if (context.value && 'user' in context.value) {
+      const user = context.value.user as Record<string, unknown>;
+      if (typeof user.username === 'string') {
+        gameState.value.playerName = user.username;
+        gameState.value.farcasterConnected = true;
+        console.log(`Connected as: ${gameState.value.playerName}`);
+      }
+    }
+  } catch (error) {
+    console.error('Failed to initialize Farcaster SDK:', error);
+  }
+  
+  // Start with a clean state
+  resetGame();
+  gameState.value.showTitleScreen = true; // Force title screen to show initially
+});
+
+// Game title for display
+const gameTitle = "Even Though I'm Just a Regular High Schooler Who Accidentally Confessed My Feelings to the Cool and Mysterious Girl in Class, She Turned Out to Be a Tsundere, and Now Every Day Feels Like a Battle Between Love, Embarrassment, and Unexpected Heartwarming Moments Under the Cherry Blossoms!";
+</script>
+
+<template>
+  <div class="game-container">
+    <div v-if="!isSDKLoaded" class="loading">Loading...</div>
+    
+    <template v-else>
+      <!-- Title Screen -->
+      <TitleScreen 
+        v-if="gameState.showTitleScreen"
+        :title="gameTitle"
+        :farcasterConnected="gameState.farcasterConnected"
+        :playerName="gameState.playerName"
+        @startGame="startGame"
+        @connectFarcaster="connectFarcaster"
+      />
+      
+      <!-- Game Screen -->
+      <GameScreen 
+        v-else
+        :farChanMood="gameState.farChanMood"
+        :currentDialogue="currentDialogue"
+        :dialogOptions="currentOptions"
+        :isFinalScene="isFinalScene"
+        :finalEnding="getFinalEnding"
+        @selectOption="handleOptionSelect"
+        @resetGame="resetGame"
+        @shareToFarcaster="shareToFarcaster"
+        :farcasterConnected="gameState.farcasterConnected"
+        :turnCount="gameState.turnCount"
+        :gameOutcome="gameState.lastOutcome || ''"
+      />
+    </template>
+  </div>
+</template>
+
+<style>
+/* Apply a reset to ensure consistent sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 95vw;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+/* Responsive styles */
+@media (min-width: 1200px) {
+  .game-container {
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .game-container {
+    max-width: 85vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-container {
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+</file>
+
+<file path="README.md">
+[![CodeQL](https://github.com/ngmisl/farchan/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/ngmisl/farchan/actions/workflows/github-code-scanning/codeql)
+
+# Far-chan RomCom Game 💘
+
+A visual novel-style romance game built as a Farcaster Frame, featuring Far-chan, a cute tsundere high school girl who you accidentally confessed your feelings to!
+
+## 🌟 Features
+
+- **Visual Novel Gameplay**: Experience a short, sweet romcom adventure with multiple endings
+- **Character Expression System**: Watch Far-chan's mood change based on your dialogue choices
+- **Turn Counting**: The game tracks how many turns it takes you to reach an ending
+- **Farcaster Integration**: Connect your Farcaster account and share your good ending
+- **Responsive Design**: Fully optimized for both mobile and desktop play
+- **Static Architecture**: No backend required, deploy anywhere
+
+## 🚀 Tech Stack
+
+- **Framework**: [Vue.js](https://vuejs.org/) 
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Package Manager**: [Bun](https://bun.sh/)
+- **TypeScript**: For type safety
+- **Zod**: For schema validation
+- **Farcaster SDK**: For Farcaster Frame integration
+
+## 📋 Prerequisites
+
+- [Bun](https://bun.sh/) installed on your machine
+- A Farcaster account (optional, only for sharing feature)
+
+## 🔧 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/farchan.git
+   cd farchan
+   ```
+
+2. Install dependencies:
+   ```bash
+   bun install
+   ```
+
+3. Start the development server:
+   ```bash
+   bun run dev
+   ```
+
+4. Build for production:
+   ```bash
+   bun run build
+   ```
+
+## 🎮 How to Play
+
+1. Start the game by clicking "Start Game" on the title screen
+2. Read through the dialogue and select your responses
+3. Your choices affect Far-chan's mood and potentially lead to different endings
+4. Try to get the "good ending" in as few turns as possible
+5. If you connect your Farcaster account, you can share your achievement
+
+## 🖼️ Farcaster Frame
+
+This game is designed to run as a Farcaster Frame. When deployed, users can:
+
+- Play directly within the Farcaster client
+- Share their in-game achievements to their Farcaster feed
+- Create a fun, interactive experience within the Farcaster ecosystem
+
+## 📱 Mobile Optimization
+
+The game is designed with a mobile-first approach:
+- Responsive text sizing that adapts to screen size
+- Touch-friendly UI elements
+- Compact dialogue interface optimized for smaller screens
+- Vertical layout that works well on mobile devices
+
+## 🧑‍💻 Development
+
+### Project Structure
+
+- `src/components/` - Vue components for game parts
+- `src/App.vue` - Main game logic and state management
+- `public/` - Static assets including character expressions
+
+### Game State
+
+The game uses Zod for validation of the game state, ensuring type safety throughout the gameplay. The state includes:
+
+- Current game phase
+- Far-chan's mood
+- Dialogue history
+- Player choices
+- Turn count
+
+## 📄 License
+
+[MIT](LICENSE)
+
+## 🙏 Acknowledgements
+
+- Character design inspired by anime visual novels
+- Built with the awesome Farcaster Frames SDK
+</file>
+
+</files>
