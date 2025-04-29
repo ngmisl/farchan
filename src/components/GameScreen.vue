@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import CharacterDisplay from './CharacterDisplay.vue';
 import DialogueBox from './DialogueBox.vue';
+import type { DialogOption } from './DialogueBox.vue';
 
 defineProps({
   // Character state
@@ -8,14 +9,20 @@ defineProps({
   
   // Dialogue display
   currentDialogue: Object,
-  dialogOptions: Array,
+  dialogOptions: {
+    type: Array as () => DialogOption[],
+    default: () => []
+  },
   isFinalScene: Boolean,
   finalEnding: String,
   
   // Farcaster and game state
   farcasterConnected: Boolean,
   turnCount: Number,
-  gameOutcome: [String, null]
+  gameOutcome: {
+    type: String,
+    default: ''
+  }
 });
 
 defineEmits(['selectOption', 'resetGame', 'shareToFarcaster']);
@@ -23,7 +30,7 @@ defineEmits(['selectOption', 'resetGame', 'shareToFarcaster']);
 
 <template>
   <div class="game-screen" :style="{ backgroundImage: 'url(/farchan-bg.png)' }">
-    <CharacterDisplay :mood="farChanMood" />
+    <CharacterDisplay :mood="farChanMood || 'neutral'" />
     
     <DialogueBox 
       :currentDialogue="currentDialogue"
@@ -32,7 +39,7 @@ defineEmits(['selectOption', 'resetGame', 'shareToFarcaster']);
       :finalEnding="finalEnding"
       :farcasterConnected="farcasterConnected"
       :turnCount="turnCount"
-      :gameOutcome="gameOutcome"
+      :gameOutcome="gameOutcome || ''"
       @selectOption="$emit('selectOption', $event)"
       @resetGame="$emit('resetGame')"
       @shareToFarcaster="$emit('shareToFarcaster')"

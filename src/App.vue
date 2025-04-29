@@ -46,14 +46,14 @@ const context = ref<FrameContext | undefined>()
 
 // Game state
 const gameState = ref<GameState>({
+  showTitleScreen: true,
   phase: 0,
   farChanMood: 'neutral',
   dialogHistory: [],
-  selectedOption: null,
-  showTitleScreen: true,
+  selectedOption: null as number | null,
   playerName: 'You',
   farcasterConnected: false,
-  lastOutcome: null,
+  lastOutcome: null as string | null,
   turnCount: 0
 })
 
@@ -252,13 +252,18 @@ const currentScene = computed(() => {
 const currentOptions = computed(() => {
   const scene = currentScene.value;
   if (gameState.value.lastOutcome === null) {
-    return scene.options || [];
+    return scene.options || []; // Ensure options is never undefined
   }
   
   // If we have a response, get the next options based on the last outcome
   const response = gameState.value.lastOutcome ? 
     assertStringIndex(scene.responses, gameState.value.lastOutcome) : undefined;
-  return response?.nextOptions || [];
+  
+  // Use type guard to safely check if nextOptions exists
+  if (response && 'nextOptions' in response) {
+    return response.nextOptions;
+  }
+  return [];
 })
 
 const isFinalScene = computed(() => {
@@ -276,12 +281,22 @@ const getFinalEnding = computed(() => {
   const scene = currentScene.value;
   const lastOutcome = gameState.value.lastOutcome;
   
-  if (lastOutcome && lastOutcome in scene.responses) {
-    const response = assertStringIndex(scene.responses, lastOutcome);
-    return response?.ending || '';
+  if (!lastOutcome || !(lastOutcome in scene.responses)) {
+    return '';
   }
   
-  return '';
+  const response = assertStringIndex(scene.responses, lastOutcome);
+  
+  // Check if the response has an ending property
+  return (response && 'ending' in response) ? response.ending : '';
+})
+
+// Reactive refs for tracking the game state
+const currentDialogue = computed(() => {
+  if (gameState.value.dialogHistory.length === 0) {
+    return { speaker: '', text: '' };
+  }
+  return gameState.value.dialogHistory[gameState.value.dialogHistory.length - 1];
 })
 
 // Handle starting the game
@@ -357,7 +372,7 @@ const handleOptionSelect = (index: number) => {
         });
         
         // If this is an ending, add the ending text after a delay
-        if (responseObj.ending) {
+        if ('ending' in responseObj) {
           setTimeout(() => {
             // Use player's name in the ending text
             let endingText = responseObj.ending;
@@ -444,12 +459,24 @@ function shareToFarcaster() {
   }
   
   // Create the share text with turn count
-  const shareText = `I just beat "Even Though I'm Just a Regular High Schooler Who Accidentally Confessed My Feelings to the Cool and Mysterious Girl in Class, She Turned Out to Be a Tsundere, and Now Every Day Feels Like a Battle Between Love, Embarrassment, and Unexpected Heartwarming Moments Under the Cherry Blossoms!" in ${gameState.value.turnCount} turns!`;
+  const outcome = gameState.value.lastOutcome || '';
+  const turnCount = gameState.value.turnCount;
+  
+  // Craft an engaging message based on which ending was reached
+  let shareMessage = '';
+  
+  if (outcome.includes('good_end')) {
+    shareMessage = `I got the good ending with Far-chan in ${turnCount} turns! Can you do better?`;
+  } else if (outcome.includes('bad_end')) {
+    shareMessage = `I got the bad ending with Far-chan in ${turnCount} turns. Can you get the good ending?`;
+  } else {
+    shareMessage = `I've been chatting with Far-chan for ${turnCount} turns. Come join the fun!`;
+  }
   
   try {
     // Use the Farcaster SDK to create a cast
     sdk.actions.composeCast({
-      text: shareText,
+      text: shareMessage,
       embeds: ["https://farchan.orbiter.website"]
     }).then(result => {
       console.log('Shared to Farcaster successfully', result);
@@ -512,7 +539,7 @@ const gameTitle = "Even Though I'm Just a Regular High Schooler Who Accidentally
       <GameScreen 
         v-else
         :farChanMood="gameState.farChanMood"
-        :currentDialogue="gameState.dialogHistory[gameState.dialogHistory.length - 1]"
+        :currentDialogue="currentDialogue"
         :dialogOptions="currentOptions"
         :isFinalScene="isFinalScene"
         :finalEnding="getFinalEnding"
@@ -521,7 +548,7 @@ const gameTitle = "Even Though I'm Just a Regular High Schooler Who Accidentally
         @shareToFarcaster="shareToFarcaster"
         :farcasterConnected="gameState.farcasterConnected"
         :turnCount="gameState.turnCount"
-        :gameOutcome="gameState.lastOutcome"
+        :gameOutcome="gameState.lastOutcome || ''"
       />
     </template>
   </div>

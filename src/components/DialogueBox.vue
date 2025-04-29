@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+// Define interface for option objects
+export interface DialogOption {
+  text: string;
+  outcome?: string;
+}
+
 defineProps({
   currentDialogue: {
     type: Object,
-    default: null
+    default: () => ({ speaker: '', text: '' })
   },
   options: {
-    type: Array,
+    type: Array as () => DialogOption[],
     default: () => []
   },
   isFinalScene: {
@@ -28,7 +34,7 @@ defineProps({
   },
   gameOutcome: {
     type: String,
-    default: null
+    default: ''
   }
 });
 
@@ -100,7 +106,7 @@ function handleOptionClick(index: number) {
             @click="handleOptionClick(index)"
             class="option-button"
           >
-            {{ option?.text || 'Option' }}
+            {{ option.text }}
           </button>
         </div>
       </div>

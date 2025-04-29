@@ -1,9 +1,18 @@
 <script setup lang="ts">
-defineProps<{
-  title: string;
-  farcasterConnected: boolean;
-  playerName: string;
-}>();
+defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  farcasterConnected: {
+    type: Boolean,
+    default: false
+  },
+  playerName: {
+    type: String,
+    default: 'You'
+  }
+});
 
 defineEmits(['startGame', 'connectFarcaster']);
 </script>
