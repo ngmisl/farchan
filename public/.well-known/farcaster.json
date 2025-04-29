@@ -1,0 +1,17 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "Anime RomCom Game",
+    "iconUrl": "https://romcom.orbiter.website/vite.svg",
+    "homeUrl": "https://romcom.orbiter.website",
+    "imageUrl": "https://romcom.orbiter.website/farchan-neutral-transparent.png",
+    "buttonTitle": "Play Now",
+    "splashImageUrl": "https://romcom.orbiter.website/farchan-bg.png",
+    "splashBackgroundColor": "#ffffff"
+  }
+}
