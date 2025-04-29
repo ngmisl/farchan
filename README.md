@@ -1,3 +1,5 @@
+[![CodeQL](https://github.com/ngmisl/farchan/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/ngmisl/farchan/actions/workflows/github-code-scanning/codeql)
+
 # Far-chan RomCom Game 💘
 
 A visual novel-style romance game built as a Farcaster Frame, featuring Far-chan, a cute tsundere high school girl who you accidentally confessed your feelings to!
