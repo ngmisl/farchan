@@ -4,7 +4,7 @@
     "": {
       "name": "farchan",
       "dependencies": {
-        "@farcaster/frame-sdk": "^0.0.36",
+        "@farcaster/frame-sdk": "^0.0.38",
         "vue": "^3.5.13",
         "zod": "^3.24.3",
       },
@@ -78,9 +78,9 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.25.3", "", { "os": "win32", "cpu": "x64" }, "sha512-ICgUR+kPimx0vvRzf+N/7L7tVSQeE3BYY+NhHRHXS1kBuPO7z2+7ea2HbhDyZdTephgvNvKrlDDKUexuCVBVvg=="],
 
-    "@farcaster/frame-core": ["@farcaster/frame-core@0.0.33", "", { "dependencies": { "ox": "^0.4.4", "zod": "^3.24.1" } }, "sha512-KvrpTSoYeSK/gEOWz37Zh6k1i7zNqPQV/AG64HlgIEH3a7fCQsZ5iCqR8Xn/ejsKORTiajhfAQrfFGnYcVlryA=="],
+    "@farcaster/frame-core": ["@farcaster/frame-core@0.0.34", "", { "dependencies": { "ox": "^0.4.4", "zod": "^3.24.1" } }, "sha512-hohopBJo9TH5C4M+3WzcvpWfuJ6bMXyqSx4gP1AvRT3F3MxHf0qCakicV4wiR3SM9FfPNcCjUcK3wSM+WzsDjA=="],
 
-    "@farcaster/frame-sdk": ["@farcaster/frame-sdk@0.0.36", "", { "dependencies": { "@farcaster/frame-core": "0.0.33", "comlink": "^4.4.2", "eventemitter3": "^5.0.1", "ox": "^0.4.4" } }, "sha512-UjcM3J67xlQSZN5o279toY2Abr4We3nmzNctmohQQVksgSopYbT29T/vfWOFUJSKAsT5Z4fYgb6J0KUornCuBQ=="],
+    "@farcaster/frame-sdk": ["@farcaster/frame-sdk@0.0.38", "", { "dependencies": { "@farcaster/frame-core": "0.0.34", "comlink": "^4.4.2", "eventemitter3": "^5.0.1", "ox": "^0.4.4" } }, "sha512-CGrxO7Mv+Bs7QexEqkE5YbRw7eAiUwOefU1eqbHZ5JhjGlSHaCfIq3Lm8MMcWqBb7CyDVEYFDQkUWw0hjlrzTQ=="],
 
     "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@1.5.0", "", {}, "sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ=="],
 
