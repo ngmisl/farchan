@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@farcaster/frame-sdk": "^0.0.36",
+    "@farcaster/frame-sdk": "^0.0.64",
     "vue": "^3.5.13",
     "zod": "^3.24.3"
   },
